@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <title>ThaazaMeat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href={% static "bootstrap4/css/bootstrap.min.css" %}>
+  <script src= {% static "bootstrap4/jquery/jquery.js" %}></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src={% static "bootstrap4/js/bootstrap.min.js" %}></script>
+  <link rel="stylesheet" href={% static "css/style.css" %}>
+  <link rel="stylesheet" href={% static "css/animate.css" %}>
+  <script src={% static "js/javascript.js" %}></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md text-secondary navbar-dark">
+    <!-- Brand -->
+    <a href="index.html">
+    <img src={%static "images/logo.png"%} style="width:150px;height:auto;" class="navbar-brand">
+  </a>
+    <div class="dropdown">
+        <button type="button" class="btn btn-default btn_focus dropdown-toggle" data-toggle="dropdown">
+          <span><i class="fa fa-map-marker cls_clr mr-2" aria-hidden="true"></i></span>Hyderabad...
+        </button>
+        <div class="dropdown-menu">
+          <h5 class="dropdown-header">Madhapur</h5>
+          <a class="dropdown-item" href="#">Hitech-City</a>
+          <a class="dropdown-item" href="#">Ayyappa Society</a>
+          <a class="dropdown-item" href="#">Kondapur</a>
+          <h5 class="dropdown-header">Banjarahills</h5>
+          <a class="dropdown-item" href="#">kavuri Hills</a>
+        </div>
+      </div>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"><img src={% static "images/nav-bar-toggle.png" %}></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+          
+        <li class="nav-item text-center">
+         
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#MysearchBox"><i class="fa fa-search mr-2" aria-hidden="true"></i>Search</a>
+
+          <!--dialog modal box-->
+          
+
+
+
+
+
+          <!--dialog modal box-->
+
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#"><i class="fa fa-info mr-2" aria-hidden="true"></i>Help</a>
+        </li>
+        
+        <li class="nav-item text-center">
+          <a class="nav-link" href="/order/detail/"><i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i>Cart</a>
+        </li>
+
+        <li class="nav-item text-center dropdown">
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#"><i class="fa fa-user-circle mr-2" aria-hidden="true"></i></a>
+         
+
+          <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#elegantModalForm">Login</a>
+
+
+
+              <!--login form modal-->
+              
+
+
+
+
+              <!--login form modal-->
+              <a class="dropdown-item" href="#">Orders</a>
+              <a class="dropdown-item" href="#">Profile</a>
+          </div>
+          </li>
+      </ul>
+    </div>
+  </nav>
+ <!-- slider code for home page -->
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      {% for sliders in slide %}
+      <div class="carousel-item {% if forloop.first %}active{%endif%}">
+        <img src={{sliders.image.url}} alt="Hyderabad" width="1100" height="500">
+        <div class="carousel-caption">
+          <h1 class="animated bounceInRight" style="color:red;">{{sliders.header_text}}</h1>
+          <p class="animated bounceInUp" style="color:red;">{{sliders.text}}</p>
+          <button type="button" class="btn btn-outline-light animated bounceInUp btn_clr">Shop Now</button>
+        </div>   
+      </div>
+     {%endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+  <!--cards-->
+
+<div class="container my-5">
+  <div class="row">
+    {% for restaurant in item %}
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="card mb-4 box_shad">
+            <a href="/product/item/{{restaurant.id}}"><img class="card-img-top" src="{{restaurant.image.url}}" alt="Card image" style="width:100%; height: 75%;"></a>
+  
+          <div class="card-body">
+              <h6 class="card-text mb-0"><a href="#" class="text-decoration-none text_clr">{{restaurant.name}}</a></h6>
+              <p class="small text-muted">{{restaurant.sub_text}}</p>
+              <div class="d-flex justify-content-between">
+                  <div class="small bg_star"><i class="fa fa-star" aria-hidden="true"></i> 4.2</div>
+                  <div class="small">39Mins</div>
+                  <div class="small">&#36; {{restaurant.price}} per/Kg </div>
+              </div>
+          </div>
+        </div>
+      </div>  
+      {% endfor %}    
+    </div>
+  </div>
+  
+
+  <!--cards-->
+
+
+  <!--footer-->
+    <section class="footer p-3">
+      <div class="row">
+
+
+        <div class="col-md-4 text-center bor_rght">
+          
+            <a href="index.html"><img src={%static "images/logo.png"%} style="width:250px;height:auto;"></a><br>
+          <a href="#" class="btn btn_one">SIGN IN</a>
+          <a href="#" class="btn btn_one">REGISTER</a>
+      </div>
+        <div class="col-md-4 text-center bor_rght">
+        <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+          <h4 class="text-white d-flex mx-auto d-block justify-content-center">SOCIAL LINKS</h4>
+        <!-- Grid column -->
+        <div class="col-md-12 py-5 d-flex justify-content-center">
+          <div class="mb-5 flex-center">
+              
+            <!-- Facebook -->
+            <a class="fb-ic links_icons">
+              <i class="fab fa-facebook-f fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic links_icons">
+              <i class="fab fa-twitter fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic links_icons">
+              <i class="fab fa-google-plus-g fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic links_icons">
+              <i class="fab fa-linkedin-in fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic links_icons">
+              <i class="fab fa-instagram fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic links_icons">
+              <i class="fab fa-pinterest fa-lg text-white fa-1x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
+      <a href="www.thaazameat.com" class="text-light"> thaazameat.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+</div>
+<div class="col-md-4 text-center bor_rght">
+    <div class="address text-white">
+      <h4>GET IN TOUCH</h4>
+        <p class="m-0 text-light">Plot no:139A, Spline Arched,</p>
+        <p class="m-0">Ayyappa Society, Madhapur,</p>
+        <p class="m-0">Near Hi-tech City, Hyderabad</p>
+        <p class="m-0">5000081.</p><br>
+        <p class="m-0">mail: thaazameat@gmail.com</p>
+        <p class="m-0">www.thaazameat.com</p>
+    </div>
+</div>
+</div>
+  <!-- Footer -->
+    </section>
+  <!--footer-->
+
+  <!--modal login data-->
+  <!-- Modal -->
+<div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <!--Content-->
+  <div class="modal-content form-elegant">
+    <!--Header-->
+    <div class="modal-header btn_clr text-center">
+      <h5 class="modal-title w-100 dark-grey-text font-weight-bold" id="myModalLabel"><strong>Sign In</strong></h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true" style="color:#fff;">&times;</span>
+      </button>
+    </div>
+    <!--Body-->
+    <div class="modal-body mx-4">
+      <!--Body-->
+      <div class="md-form mb-3">
+        <input type="email" id="Form-email1" placeholder=" "class="form-control validate">
+        <label data-error="wrong" data-success="right" for="Form-email1" class="text-muted">Your email</label>
+      </div>
+
+      <div class="md-form pb-3">
+        <input type="password" id="Form-pass1" class="form-control validate">
+        <label data-error="wrong" data-success="right" for="Form-pass1" class="text-muted">Your password</label>
+        <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+            Password?</a></p>
+      </div>
+
+      <div class="text-center mb-3">
+        <button type="button" class="btn blue-gradient btn_clr btn-block btn-rounded z-depth-1a">Sign in</button>
+      </div>
+      <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+        with:</p>
+
+      <div class="row my-3 d-flex justify-content-center">
+        <!--Facebook-->
+        <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f  text-center"></i></button>
+        <!--Twitter-->
+        <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter cls_clr"></i></button>
+        <!--Google +-->
+        <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g cls_clr"></i></button>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="modal-footer mx-5 pt-3 mb-1">
+      <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1 cls_clr">
+          Sign Up</a></p>
+    </div>
+  </div>
+  <!--/.Content-->
+</div>
+</div>
+<!-- Modal -->
+
+
+
+  <!--modal login data-->
+</body>
+</html>

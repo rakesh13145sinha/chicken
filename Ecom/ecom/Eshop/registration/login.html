@@ -1,0 +1,9 @@
+{% extends "templates/shoper/base.html" %}
+{% block body %}
+<h4 class="h4">Login here</h4>
+<form method='POST'>
+{{form.as_p}}
+{% csrf_token %}
+<input  class="btn btn-primary "type="submit" name="submit" value="Login">
+</form>
+{% endblock  %}

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <title>ThaazaMeat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href={% static "bootstrap4/css/bootstrap.min.css" %}>
+  <script src={% static "bootstrap4/jquery/jquery.js" %}></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src={%static "bootstrap4/js/bootstrap.min.js" %}></script>
+  <link rel="stylesheet" href={% static "css/style.css" %}>
+  <link rel="stylesheet" href={% static "css/animate.css" %}>
+  <script src={% static "js/javascript.js" %}></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md text-secondary navbar-dark">
+    <!-- Brand -->
+    <a href="index.html">
+    <img src={% static "images/logo.png" %} style="width:150px;height:auto;" class="navbar-brand">
+  </a>
+    <div class="dropdown">
+        <button type="button" class="btn btn-default btn_focus dropdown-toggle" data-toggle="dropdown">
+          <span><i class="fa fa-map-marker cls_clr mr-2" aria-hidden="true"></i></span>Hyderabad...
+        </button>
+        <div class="dropdown-menu">
+          <h5 class="dropdown-header">Madhapur</h5>
+          <a class="dropdown-item" href="#">Hitech-City</a>
+          <a class="dropdown-item" href="#">Ayyappa Society</a>
+          <a class="dropdown-item" href="#">Kondapur</a>
+          <h5 class="dropdown-header">Banjarahills</h5>
+          <a class="dropdown-item" href="#">kavuri Hills</a>
+        </div>
+      </div>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+          
+        <li class="nav-item text-center">
+         
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#MysearchBox"><i class="fa fa-search mr-2" aria-hidden="true"></i>Search</a>
+
+          <!--dialog modal box-->
+          <div class="modal" id="MysearchBox">
+            <div class="modal-dialog modal-side modal-top-right" style="margin:100px auto;">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header header-search p-2">
+                  <h4 class="modal-title" style="font-size:15px;">Search Location</h4>
+                  <button type="button" class="close" data-dismiss="modal" style="color:#fff;">&times;</button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+
+
+                  <div class="container mb-4">
+                      <ul class="list-inline">
+                          <li class="list-inline-item"><a href="#">Madhapur</a></li>
+                          <li class="list-inline-item"><a href="#">Kukatpally</a></li>
+                          <li class="list-inline-item"><a href="#">Kondpur</a></li>
+                          <li class="list-inline-item"><a href="#">Banjarahills</a></li>
+                          <li class="list-inline-item"><a href="#">Ameerpet</a></li>
+                          <li class="list-inline-item"><a href="#">Panjagutta</a></li>
+                          <li class="list-inline-item"><a href="#">Madhapur</a></li>
+                          <li class="list-inline-item"><a href="#">Kukatpally</a></li>
+                          <li class="list-inline-item"><a href="#">Kondpur</a></li>
+                          <li class="list-inline-item"><a href="#">Banjarahills</a></li>
+                          
+                        </ul>
+                  </div>
+                  <div class="container">
+                    <div class="col-md-12">
+                      
+                             <div id="custom-search-input">
+                                              <div class="input-group">
+                                                  <input type="text" class="  search-query form-control" placeholder="Search Near Location" />
+                                                  <span class="input-group-btn">
+                                                      <button class="btn btn-danger" type="button">
+                                                          <span class="fa fa-search"></span>
+                                                      </button>
+                                                  </span>
+                                              </div>
+                                          </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Modal footer -->
+               
+          
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <!--dialog modal box-->
+
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#"><i class="fa fa-info mr-2" aria-hidden="true"></i>Help</a>
+        </li>
+        
+        <li class="nav-item text-center">
+          <a class="nav-link" href="Order_page.html"><i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i>Cart</a>
+        </li>
+
+        <li class="nav-item text-center dropdown">
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#"><i class="fa fa-user-circle mr-2" aria-hidden="true"></i></a>
+         
+
+          <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#elegantModalForm">Login</a>
+
+
+
+              <!--login form modal-->
+              
+
+
+
+
+              <!--login form modal-->
+              <a class="dropdown-item" href="#">Orders</a>
+              <a class="dropdown-item" href="#">Profile</a>
+          </div>
+          </li>
+      </ul>
+    </div>
+  </nav>
+  <!--cards-->
+
+
+
+  <!--payment page here data-->
+          <section class="jumbotron p-2">
+            <div class="px-5 py-3"><!--col-md-12-->
+                <h4 class="cls_clr">Add Your Shop With Us</h4>
+                <p class="text-muted mb-1">Fill Out Form Quickly</p>
+
+                <!--boxes-->
+                    <div class="row px-0 mb-3">
+                        <div class="col-md-9">
+                            <div class="card">
+                                <div class="card-header bg-clr-head text-white p-2">
+                                    <h6 class="card-title mb-1">Business Details</h6>
+                                </div>
+
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="search">Shop Name:</label>
+                                                <input type="Search" class="form-control" placeholder="Search Shop..." id="email">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="search">Area:</label>
+                                                    <input type="Search" class="form-control" placeholder="Search Area..." id="email">
+                                                </div>
+                                         </div>
+                                    </div>
+
+                                    <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="search">Pincode:</label>
+                                                    <input type="text" class="form-control" placeholder="Search Shop..." id="email">
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="search">Phone Number:</label>
+                                                        <input type="text" class="form-control" placeholder="Search Area..." id="email">
+                                                    </div>
+                                             </div>
+                                         </div>
+
+
+
+                                         <div class="row my-2">
+                                                <div class="col-md-6">
+                                                        <label class="control-label col-sm-12" for="email">Are you the owner of the shop or not?:</label>
+                                                </div>
+        
+                                                <div class="col-md-6">
+                                                        
+                                                                <div class="custom-control custom-radio custom-control-inline">
+                                                                  <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
+                                                                  <label class="custom-control-label" for="customRadio">Yes</label>
+                                                                </div>
+                                                                <div class="custom-control custom-radio custom-control-inline">
+                                                                  <input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx">
+                                                                  <label class="custom-control-label" for="customRadio2">No</label>
+                                                                </div>
+                                                     
+                                                 </div>
+                                             </div>
+
+
+                                             <div class="row my-2">
+                                                    <div class="col-md-6">
+                                                            <label class="control-label col-sm-12" for="email">Shop Opening Status:</label>
+                                                    </div>
+            
+                                                    <div class="col-md-6">
+                                                            
+                                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                                      <input type="radio" class="custom-control-input" id="customRadio1" name="example" value="customEx">
+                                                                      <label class="custom-control-label" for="customRadio1">Already Opened</label>
+                                                                    </div>
+                                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                                      <input type="radio" class="custom-control-input" id="customRadio3" name="example" value="customEx">
+                                                                      <label class="custom-control-label" for="customRadio3">Opening Soon...</label>
+                                                                    </div>
+                                                         
+                                                     </div>
+                                                 </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+        <!--second block-->
+                <div class="row px-0 mb-3">
+                        <div class="col-md-9">
+                            <div class="card">
+                                <div class="card-header bg-clr-head text-white p-2">
+                                    <h6 class="card-title mb-1">Location Details</h6>
+                                </div>
+
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h6 class="col-md-12">Address/Landmark Search:</h6>
+                                        <div class="col-md-12 form-group">
+                                                
+                                                <input type="text" class="form-control" placeholder="Search Shop..." id="email">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                            <h6 class="col-md-12">Map the Co-ordinates(Drag the Map the to Adjust Pin):</h6>
+                                            <div class="col-md-12 form-group">
+                                                <img src={% static "images/map-source.png" %}  alt="map-image"  class="img-fluid">                
+                                
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+ <!--second block-->
+
+
+ <!--third block-->
+ <div class="row px-0 mb-3">
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header bg-clr-head text-white p-2">
+                    <h6 class="card-title mb-1">Services Providing</h6>
+                </div>
+
+
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <h6 class="col-md-12">Services:</h6>
+                        <div class="col-md-12">
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck1" name="example" value="customEx">
+                                          <label class="custom-control-label" for="customCheck1">Marriages</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck2" name="example" value="customEx">
+                                          <label class="custom-control-label" for="customCheck2">Birthdays</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck3" name="example" value="customEx">
+                                                <label class="custom-control-label" for="customCheck3">Functions</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck4" name="example" value="customEx">
+                                                <label class="custom-control-label" for="customCheck4">Festivals</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck5" name="example" value="customEx">
+                                                <label class="custom-control-label" for="customCheck5">Events</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" name="example" value="customEx">
+                                                <label class="custom-control-label" for="customCheck6">Others</label>
+                                        </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                            <h6 class="col-md-12">Payment Method:</h6>
+                                <div class="col-md-12">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                              <input type="checkbox" class="custom-control-input" id="customCheck7" name="example" value="customEx">
+                                              <label class="custom-control-label" for="customCheck7">NetBanking</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                              <input type="checkbox" class="custom-control-input" id="customCheck8" name="example" value="customEx">
+                                              <label class="custom-control-label" for="customCheck8">Credit/Debit Cards</label>
+                                            </div>
+    
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck9" name="example" value="customEx">
+                                                    <label class="custom-control-label" for="customCheck9">Mobile Wallets</label>
+                                            </div>
+    
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck10" name="example" value="customEx">
+                                                    <label class="custom-control-label" for="customCheck10">Cash On Delivery</label>
+                                            </div>
+                                            
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!--third block-->
+
+
+            <!--fourth block-->
+            <div class="row px-0 mb-3">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header bg-clr-head text-white p-2">
+                                <h6 class="card-title mb-1">Order Date and Time</h6>
+                            </div>
+            
+            
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <h6 class="col-md-12">Days:</h6>
+                                    
+
+                                    <div class="col-md-12">
+                                            <div class="custom-control custom-checkbox custom-control-inline mr-2">
+                                              <input type="checkbox" class="custom-control-input" id="customCheck11" name="example" value="customEx">
+                                              <label class="custom-control-label" for="customCheck11">Monday</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline mr-2">
+                                              <input type="checkbox" class="custom-control-input" id="customCheck12" name="example" value="customEx">
+                                              <label class="custom-control-label" for="customCheck12">Tuesday</label>
+                                            </div>
+    
+                                            <div class="custom-control custom-checkbox custom-control-inline mr-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck13" name="example" value="customEx">
+                                                    <label class="custom-control-label" for="customCheck13">Wednesday</label>
+                                            </div>
+    
+                                            <div class="custom-control custom-checkbox custom-control-inline mr-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck14" name="example" value="customEx">
+                                                    <label class="custom-control-label" for="customCheck14">Thursday</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline mr-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck15" name="example" value="customEx">
+                                                    <label class="custom-control-label" for="customCheck15">Friday</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline mr-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck16" name="example" value="customEx">
+                                                    <label class="custom-control-label" for="customCheck16">Saturday</label>
+                                            </div>
+
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck17" name="example" value="customEx">
+                                                    <label class="custom-control-label" for="customCheck17">Sunday</label>
+                                            </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                        <h6 class="col-md-12">Select Time:</h6>
+                                        
+    
+                                        <div class="col-md-12">
+                                                <div class="d-flex text-white">
+                                                        <div class="p-2">
+                                                                <div class="dropdown">
+                                                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                                                                          From
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                          <a class="dropdown-item" href="#">00:00-00:30</a>
+                                                                          <a class="dropdown-item" href="#">00:30-01:00</a>
+                                                                          <a class="dropdown-item" href="#">01:00-01:30</a>
+                                                                        </div>
+                                                                      </div>
+
+
+                                                        </div>
+                                                        <div class="p-2 text-secondary">--</div>
+                                                        <div class="p-2">
+
+                                                                <div class="dropdown">
+                                                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                                                                          To
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                                <a class="dropdown-item" href="#">00:00-00:30</a>
+                                                                                <a class="dropdown-item" href="#">00:30-01:00</a>
+                                                                                <a class="dropdown-item" href="#">01:00-01:30</a>
+                                                                        </div>
+                                                                      </div>
+                                                        </div>
+
+
+                                                        <div class="p-2">
+
+                                                            <a href="#" class="btn btn-default bg-clr-head text-white"><i class="fa fa-plus"></i> Add Time</a>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+      
+            <!--fourth block-->
+
+
+
+            <!--fifth block-->
+                    <!--fourth block-->
+            <div class="row px-0 mb-3">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header bg-clr-head text-white p-2">
+                                <h6 class="card-title mb-1">Contact Information</h6>
+                            </div>
+            
+            
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <h6 class="col-md-12">Contact Email Address:</h6>
+                                    
+
+                                    <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Enter Contact Email" id="email">
+                                            </div>   
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+            </div>
+
+        
+
+
+
+
+            <!--fifth block-->
+
+
+            <!--submit button-->
+            <div class="row px-0 mb-3">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header bg-clr-head text-white p-0">
+                                <a href="#" class="btn btn-block mb-1 text-center text-white text-decoration-none">Add Shop</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!--submit button-->
+                        
+                <!--boxes-->
+                </div>
+
+
+               
+            </div>
+          </section>
+
+  <!--payment page here data-->
+
+
+  <!--footer-->
+    <section class="footer p-3">
+      <div class="row">
+
+
+        <div class="col-md-4 text-center bor_rght">
+          
+            <a href="index.html"><img src={% static  "images/logo.png" %} style="width:250px;height:auto;"></a><br>
+          <a href="#" class="btn btn_one">SIGN IN</a>
+          <a href="#" class="btn btn_one">REGISTER</a>
+      </div>
+        <div class="col-md-4 text-center bor_rght">
+        
+<footer class="page-footer font-small cyan darken-3">
+
+   
+    <div class="container">
+  
+     
+      <div class="row">
+          <h4 class="text-white d-flex mx-auto d-block justify-content-center">SOCIAL LINKS</h4>
+        
+        <div class="col-md-12 py-5 d-flex justify-content-center">
+          <div class="mb-5 flex-center">
+              
+            
+            <a class="fb-ic links_icons">
+              <i class="fab fa-facebook-f fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+           
+            <a class="tw-ic links_icons">
+              <i class="fab fa-twitter fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+            
+            <a class="gplus-ic links_icons">
+              <i class="fab fa-google-plus-g fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+            
+            <a class="li-ic links_icons">
+              <i class="fab fa-linkedin-in fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+           
+            <a class="ins-ic links_icons">
+              <i class="fab fa-instagram fa-lg text-white  mr-3 fa-1x"> </i>
+            </a>
+            
+            <a class="pin-ic links_icons">
+              <i class="fab fa-pinterest fa-lg text-white fa-1x"> </i>
+            </a>
+          </div>
+        </div>
+       
+      </div>
+      
+  
+    </div>
+    
+    <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
+      <a href="www.thaazameat.com" class="text-light"> thaazameat.com</a>
+    </div>
+   
+  
+  </footer>
+</div>
+<div class="col-md-4 text-center bor_rght">
+    <div class="address text-white">
+      <h4>GET IN TOUCH</h4>
+        <p class="m-0 text-light">Plot no:139A, Spline Arched,</p>
+        <p class="m-0">Ayyappa Society, Madhapur,</p>
+        <p class="m-0">Near Hi-tech City, Hyderabad</p>
+        <p class="m-0">5000081.</p><br>
+        <p class="m-0">mail: thaazameat@gmail.com</p>
+        <p class="m-0">www.thaazameat.com</p>
+    </div>
+</div>
+</div>
+  
+    </section>
+  <!--footer-->
+
+  <script>
+      	$(document).ready(function(){
+		    $('.count').prop('disabled', true);
+   			$(document).on('click','.plus',function(){
+				$('.count').val(parseInt($('.count').val()) + 1 );
+    		});
+        	$(document).on('click','.minus',function(){
+    			$('.count').val(parseInt($('.count').val()) - 1 );
+    				if ($('.count').val() == 0) {
+						$('.count').val(1);
+					}
+    	    	});
+ 		});
+
+    </script>
+</body>
+</html>

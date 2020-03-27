@@ -1,0 +1,18 @@
+{% extends "templates/shoper/base.html" %}
+{% block body %}
+<div class="row">
+<div class="col-md-4">
+
+{{item.productimage_set.all}}</br></br>
+ 
+</div>
+<div class="col-md-8" style="font-weight: bold; color:black; text-align: justify;">
+{{item.model |upper}}<br></br></br><hr>
+{{item.discripsion}}</br></br><hr></br></br>
+<a href="/cart-item/add/{{item.slug}}" class="btn btn-primary btn-lg btn-block">&#x20B9;&nbsp;{{item.price}}&nbsp;&nbsp;&nbsp;Add to cart</a>
+
+</div>
+
+</div>
+
+{% endblock  %}

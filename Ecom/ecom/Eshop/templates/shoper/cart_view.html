@@ -1,0 +1,36 @@
+{% extends "templates/shoper/base.html" %}
+{% block body %}
+
+{% if empty %}
+{{empty_massage}}
+{% else %}
+<div class="row">
+<div class="col-sm-12 col-sm-offset-3">
+
+  <table class="table table-bordered table-dark table-hover">
+  <thead>
+  <th>PRODUCT</th><th>PRICE</th><th></th>
+  </thead>
+  <tfoot>
+  <tr><td></td><td>Total :&nbsp;&nbsp;&nbsp;&#x20B9;&nbsp;{{cart.total}}</td></tr>
+  </tfoot>
+  {% for item in cart.product.all %}
+    <tr><td>{{item.name |upper}}</td><td>{{item.price}}</td>
+      <td><a href="/cart-item/delete/{{item.slug}}" class="btn btn-danger btn-sm"> Remove</a></td>
+      
+    </tr>
+  
+  {% endfor %}
+</table>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-4 col-sm-offset-3">
+<a href="/" class="btn btn-success btn-sm">Continue Shoping</a>
+</div></div>
+
+{% endif %}
+
+
+{% endblock  %}
